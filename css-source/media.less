@@ -295,6 +295,36 @@
 			}
 		}
 	}
+	.footer {
+		flex-direction: column;
+//		height: 160px;
+		&__copyright {
+			flex-direction: column;
+			font-size: 12px;
+			
+			.btn__social {
+				margin-left: 5px;
+				width: 16px;
+				height: 16px;
+				&.btn-inst {
+					background-size: 8px;
+				}
+				&.btn-vk {
+					background-size: 8px;
+				}
+			}
+		}
+		&__dev {
+			font-size: 8px;
+			img {
+				width: 100px;
+			}
+		}
+		&__social {
+			margin-top: 10px;
+		
+		}
+	}
 }
 @media all and (max-width: 425px) {
 	.services {

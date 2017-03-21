@@ -28,10 +28,21 @@ window.onload = window.onresize = function () {
 	}
 }
 $(document).ready(function () {
-	
-	$('a[href="#contacts"]').anchor({
-		transitionDuration: 1000
-	});
+	if(document.querySelector('.popup-contacts')) {
+		$('a[href="#contacts"]').click(function () {
+			$('.popup-contacts').fadeIn();
+			$(this).addClass('active');
+//			$('.popup-contacts').addClass('fadeIn');
+		})
+		$('.contacts__btn-close').click(function () {
+			$('a[href="#contacts"]').removeClass('active');
+			$('.popup-contacts').fadeOut();
+		})
+	} else {
+		$('a[href="#contacts"]').anchor({
+			transitionDuration: 1000
+		});
+	}
 	$('a[href="#reviews"]').anchor({
 		transitionDuration: 1000
 	});
