@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Услуги</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+	<header class="header">
+		<div class="header__control">
+			<div class="header__logo"></div>
+			<button class="btn btn__menu header__btn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+		<nav class="header__mobile">
+			<a href="#" class="header__item ">Портфолио</a>
+			<a href="#" class="header__item ">Команда</a>
+			<a href="#" class="header__item active">Услуги</a>
+			<a href="#contacts" class="header__item ">Контакты</a>
+		</nav>
+		<div class="header__social">
+			<div class="btn btn__social btn-inst"></div>
+			<div class="btn btn__social btn-fb"></div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="text-center">
+			<div class="title">Услуги</div>
+			<div class="services">
+				<div class="services__col">
+					<a href="#" class="services__item" style="background-image: url(img/services-4.jpg)">
+						<div class="services__title-block" style="background: #ed0677">
+							<div class="services__title">Event</div>
+							<div class="services__subtitle">Организация мероприятий</div>
+						</div>
+					</a>
+				</div>
+				<div class="services__col ">
+					<a href="#" class="services__item" style="background-image: url(img/services-2.jpg)">
+						<div class="services__title-block" style="background: #2d7486">
+							<div class="services__title">Техоснащение</div>
+						</div>
+					</a>
+				</div>
+				<div class="services__col ">
+					<a href="#" class="services__item" style="background-image: url(img/services-1.jpg)">
+						<div class="services__title-block" style="background: #f5962c">
+							<div class="services__title">Креатив</div>
+						</div>
+					</a>
+				</div>
+				<div class="services__col">
+					<a href="#" class="services__item" style="background-image: url(img/services-3.jpg)">
+						<div class="services__title-block" style="background: #a14290">
+							<div class="services__title">PR</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="contacts" id="contacts">
+			<div class="contacts__map" id="map"></div>
+			<div class="contacts__address">
+				<div class="contacts__title">Контакты</div>
+				<figure class="contacts__line"></figure>
+				<address>
+					г.Владивосток<br>
+					ул.Металистов 5а<br>
+					<a href="tel:84232642402">8 (423) 264-24-02</a><br>
+					<a href="tel:84232949368">8 (423) 294-93-68</a>
+				</address>
+				<div class="contacts__copyright">
+					<span>c. EDDISON ‘ 2002-2017</span>
+				</div>
+				
+				<div class="contacts__dev">Разработка сайта:
+					<a href="" alt="front_by_canonical.site_=D">HOUSEMEDIA</a>
+				</div>
+				<div class="contacts__social">
+					<a href="#" class="btn btn__social btn__social_b-black btn-inst"></a>
+					<a href="#" class="btn btn__social btn__social_b-black btn-vk"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/anchor.js"></script>
+	
+	<script src="js/main.min.js"></script>
+	
+	<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+	<script type="text/javascript">
+		var map;
+
+		DG.then(function () {
+			map = DG.map('map', {
+				center: [54.98, 82.89],
+				zoom: 13
+			});
+		});
+	</script>
+</body>
+</html>
