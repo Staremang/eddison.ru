@@ -120,8 +120,14 @@ $(document).ready(function () {
 		$(this).children().css('transform', 'rotateX(' + -relativeY * t + 'deg) rotateY(' + relativeX * t + 'deg)')
 //		console.log("X: " + relativeX + "  Y: " + relativeY, $(this).innerWidth());
 	});
+	$(".services__col").mouseover(function(e) {
+		$(this).children().css('transition', '')
+	})
 	$(".services__col").mouseout(function(e) {
-		$(this).children().css('transform', 'rotateX(0deg) rotateY(0deg)')
+		$(this).children().css({
+			'transform':'rotateX(0deg) rotateY(0deg)',
+			'transition': 'transform .1s ease'
+		})
 	})
 
 })
