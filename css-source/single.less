@@ -241,7 +241,6 @@
 	align-items: stretch;
 	margin: 20px 0;
 	flex-wrap: wrap;
-	
 //	height: 500px;
 	&__title {
 		font-size: 24px;
@@ -268,6 +267,7 @@
 	&__col {
 		padding: 5px;
 		width: 25%;
+		perspective: 500px;
 //		&:last-child {
 //			padding-right: 0;
 //			margin-right: 0; 
@@ -289,6 +289,12 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
+		transform-style: preserve-3d;
+//		background-color: black;
+//		transition: transform .3s ease;
+//		&:hover {
+//			transform: scale(1.02);
+//		}
 	}
 }
 .command {

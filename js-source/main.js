@@ -110,5 +110,18 @@ $(document).ready(function () {
 			}
 		}
 	});
+	$(".services__col").mousemove(function(e) {
+//		console.log('Событие наведения');
+		var offset = $(this).children().offset();
+		var relativeX = (e.pageX - offset.left - $(this).children().innerWidth()/2)/($(this).children().innerWidth()/2);
+		var relativeY = (e.pageY - offset.top - $(this).children().innerHeight()/2)/($(this).children().innerHeight()/2),
+			t = 5;
+		
+		$(this).children().css('transform', 'rotateX(' + -relativeY * t + 'deg) rotateY(' + relativeX * t + 'deg)')
+//		console.log("X: " + relativeX + "  Y: " + relativeY, $(this).innerWidth());
+	});
+	$(".services__col").mouseout(function(e) {
+		$(this).children().css('transform', 'rotateX(0deg) rotateY(0deg)')
+	})
 
 })
