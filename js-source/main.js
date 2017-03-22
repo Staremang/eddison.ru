@@ -115,7 +115,7 @@ $(document).ready(function () {
 		var offset = $(this).children().offset();
 		var relativeX = (e.pageX - offset.left - $(this).children().innerWidth()/2)/($(this).children().innerWidth()/2);
 		var relativeY = (e.pageY - offset.top - $(this).children().innerHeight()/2)/($(this).children().innerHeight()/2),
-			t = 5;
+			t = 2;
 		
 		$(this).children().css('transform', 'rotateX(' + -relativeY * t + 'deg) rotateY(' + relativeX * t + 'deg)')
 //		console.log("X: " + relativeX + "  Y: " + relativeY, $(this).innerWidth());
@@ -126,7 +126,7 @@ $(document).ready(function () {
 	$(".services__col").mouseout(function(e) {
 		$(this).children().css({
 			'transform':'rotateX(0deg) rotateY(0deg)',
-			'transition': 'transform .1s ease'
+			'transition': 'transform .3s ease'
 		})
 	})
 

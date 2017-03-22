@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Портфолио</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+	<header class="header">
+		<div class="header__control">
+			<div class="header__logo"></div>
+			<button class="btn btn__menu header__btn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+		<nav class="header__mobile">
+			<a href="#" class="header__item active">Портфолио</a>
+			<a href="#" class="header__item">Команда</a>
+			<a href="#" class="header__item">Услуги</a>
+			<a href="#contacts" class="header__item ">Контакты</a>
+		</nav>
+		<div class="header__social">
+			<div class="btn btn__social btn-inst"></div>
+			<div class="btn btn__social btn-fb"></div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="scale">
+			<div class="scale__item">2017</div>
+			<div class="scale__item">2016</div>
+			<div class="scale__item">2015</div>
+			<div class="scale__item">2014</div>
+		</div>
+		<div class="portfolio">
+			<div class="portfolio-tab">
+				<a href="#" class="portfolio-tab__item active">
+					Все проекты 
+					<span>82</span>
+				</a>
+				<a href="#" class="portfolio-tab__item">
+					Новое 
+					<span>82</span>
+				</a>
+				<a href="#" class="portfolio-tab__item">
+					Мероприятия 
+					<span>82</span>
+				</a>
+				<a href="#" class="portfolio-tab__item">
+					Полиграфия 
+					<span>82</span>
+				</a>
+				<a href="#" class="portfolio-tab__item">
+					Дизайн 
+					<span>82</span>
+				</a>
+			</div>
+			<div class="portfolio-grid">
+				<div class="portfolio-grid__sizer"></div>
+				<div class="portfolio-grid__item grid-w-2 grid-h-2">
+					<a href="#" data-tab="" class="portfolio__item" style="border-color: #0045b6; background-image: url('img/pj-1.png')">
+						<div class="annotation first__annotation">
+							<div href="#" class="annotation__title annotation__title_white" style="background-color: #0045b6">Владивостоку 153 года</div>
+						</div>
+					</a>
+				</div>
+				<div class="portfolio-grid__item grid-w-1 grid-h-2">
+					<div class="portfolio__item" style="border-color: #e3010f; background-image: url('img/pj-2.jpg')"></div>
+				</div>
+				<div class="portfolio-grid__item grid-w-1 grid-h-2">
+					<a href="#" data-tab="" class="portfolio__item" style="border-color: #fddb17; background-image: url('img/pj-3.jpg')">
+						<div class="annotation first__annotation">
+							<div href="#" class="annotation__title annotation__title_white" style="background-color: #282828">День знаний ' 2013</div>
+						</div>
+					</a>
+				</div>
+				<div class="portfolio-grid__item grid-w-1 grid-h-2">
+					<a href="#" data-tab="" class="portfolio__item" style="border-color: #b92022; background-image: url('img/pj-4.png')"></a>
+				</div>
+				<div class="portfolio-grid__item grid-w-2 grid-h-2">
+					<a href="#" data-tab="" class="portfolio__item" style="border-color: #23577c; background-image: url('img/pr-photo-0.jpg')"></a>
+				</div>
+				<div class="portfolio-grid__item grid-w-1 grid-h-1">
+					<a href="#" data-tab="" class="portfolio__item" style="border-color: #27873c; background-image: url('img/pj-6.jpg')">
+						<div class="annotation first__annotation">
+							<div href="#" class="annotation__title annotation__title_white" style="background-color: #27873c">Зелёный марафон</div>
+						</div>
+					</a>
+				</div>
+				<div class="portfolio-grid__item grid-w-1 grid-h-1">
+					<a href="#" data-tab="" class="portfolio__item" style="border-color: #bebdc3; background-image: url('img/pj-7.jpg')">
+						<div class="annotation first__annotation">
+							<div href="#" class="annotation__title annotation__title_white" style="background-color: #13366b">Дилерский центр Hyundai</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="popup-contacts" style="display: none">
+		<div class="contacts" id="contacts">
+			<div class="contacts__map" id="map"></div>
+			<div class="contacts__address">
+				<div class="contacts__title">Контакты</div>
+				<figure class="contacts__line"></figure>
+				<address>
+					г.Владивосток<br>
+					ул.Металистов 5а<br>
+					<a href="tel:84232642402">8 (423) 264-24-02</a><br>
+					<a href="tel:84232949368">8 (423) 294-93-68</a>
+				</address>
+				<div class="contacts__copyright">
+					<span>c. EDDISON ‘ 2002-2017</span>
+				</div>
+				
+				<div class="contacts__dev">Разработка сайта:
+					<a href="" alt="front_by_canonical.site_=D">HOUSEMEDIA</a>
+				</div>
+				<div class="contacts__social">
+					<a href="#" class="btn btn__social btn__social_b-black btn-inst"></a>
+					<a href="#" class="btn btn__social btn__social_b-black btn-vk"></a>
+				</div>
+				<button class="contacts__btn-close btn btn__close">
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</div>
+		
+	</div>
+	
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/anchor.js"></script>
+	
+	<script src="js/main.min.js"></script>
+	
+	<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+	<script type="text/javascript">
+		var map;
+
+		DG.then(function () {
+			map = DG.map('map', {
+				center: [54.98, 82.89],
+				zoom: 13
+			});
+		});
+		$('.portfolio-grid').masonry({
+			percentPosition: true,
+			columnWidth: '.portfolio-grid__sizer',
+			itemSelector: '.portfolio-grid__item',
+//			gutter: 10
+//			gutter: 10
+//			columnWidth: 160
+		});
+
+	</script>
+</body>
+</html>
