@@ -83,12 +83,15 @@ $(document).ready(function () {
 		margin:10,
 		nav:false,
 //    autoWidth:true,
-//		center:true
+		center:true,
 		
 //		items:3,
 		autoWidth:true,
 		stagePadding: 150,
 		margin: 50,
+		autoplay:true,
+		autoplayTimeout:1000,
+//		autoplayHoverPause:false,
 		responsive:{
 			0:{
 				items:1,
