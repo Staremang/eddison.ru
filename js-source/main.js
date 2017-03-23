@@ -1,3 +1,55 @@
+
+var setDate = function () {
+	var t = [],
+		l = -1,
+		y;
+	
+	for (var i = 0; i < document.querySelectorAll('.portfolio-grid__item[data-date]').length; i++) {
+		y = Math.floor( Date.parse(document.querySelectorAll('.portfolio-grid__item[data-date]')[i].getAttribute('data-date'))/(1000*60*60*24*365)) + 1970;
+		
+		if ( l === -1 || t[l].year !== y) {
+			l++;
+			t[l] = {
+				year: y,
+				el: []
+			}
+		}
+		
+		t[l].el[t[l].el.length] = document.querySelectorAll('.portfolio-grid__item[data-date]')[i];
+	}
+	return t;
+}
+function setScale () {
+	var el,
+		date = new setDate();
+	document.querySelector('.scale').innerHTML = '';
+	date.forEach(function(item, i, arr) {
+		el = document.createElement('div');
+		el.classList.add('scale__item');
+		el.innerHTML = item.year;
+		el.style.marginBottom = '200px';
+//		el.style.marginTop = (item.el[0].getBoundingClientRect().top + pageYOffset - document.querySelector('.header').offsetHeight + 10) + 'px';
+		el.addEventListener('click', function () {
+			for (var i = 0; i < date.length; i++) {
+				if (date[i].year == +this.innerHTML) {
+//					window.scrollTo(0, date[i].el[0].getBoundingClientRect().top + pageYOffset - document.querySelector('.header').offsetHeight);
+					/* 
+					 Да-да, jq вставки
+					*/
+					$('html, body').animate({
+						scrollTop: date[i].el[0].getBoundingClientRect().top + pageYOffset - document.querySelector('.header').offsetHeight
+					}, 800);
+				}
+			}
+			for (var i = 0; i < document.querySelectorAll('.scale__item').length; i++) {
+				document.querySelectorAll('.scale__item')[i].classList.remove('active');
+			}
+			this.classList.add('active')
+		})
+		document.querySelector('.scale').appendChild(el);
+	});
+}
+
 window.onload = window.onresize = function () {
 	var firstHeight;
 	if (document.documentElement.clientWidth <= 768) {
@@ -26,6 +78,8 @@ window.onload = window.onresize = function () {
 	for (var i = 0; i < document.querySelectorAll('.first__grid-top .first__item').length; i++) {
 		document.querySelectorAll('.first__grid-top .first__item')[i].style.height = firstHeight / 2 + 'px';
 	}
+//	setDate();
+	setScale();
 }
 $(document).ready(function () {
 	if(document.querySelector('.popup-contacts')) {
