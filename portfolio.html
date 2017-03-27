@@ -182,13 +182,26 @@
 	
 	<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 	<script type="text/javascript">
-		var map;
+
+		var map, marker,
+			latlng = [54.98, 82.89],
+			markerText = 'EDDISON <br> ул.Металистов 5а';
 
 		DG.then(function () {
 			map = DG.map('map', {
-				center: [54.98, 82.89],
-				zoom: 13
+				trackResize: true,
+				center: latlng,
+				zoom: 15
 			});
+			marker = DG.marker(latlng).addTo(map);
+			marker.bindPopup(markerText);
+
+			if(document.querySelector('.popup-contacts')) {
+				$('a[href*="#contacts"]').click(function () {
+					map.invalidateSize();
+				})
+			}
+
 		});
 		$('.portfolio-grid').masonry({
 			percentPosition: true,

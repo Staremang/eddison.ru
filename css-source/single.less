@@ -46,16 +46,10 @@
 			flex-direction: column;
 			flex-shrink: 0;
 		}
-		&-top {
+		&-top, &-bottom  {
 			height: 50%;
 			width: 100%;
-			background-size: cover;
-			background-repeat: no-repeat;
-			position: relative;
-		}
-		&-bottom {
-			height: 50%;
-			width: 100%;
+			flex-grow: 1;
 			background-size: cover;
 			background-repeat: no-repeat;
 			position: relative;
@@ -360,6 +354,7 @@
 //		display: flex;
 //		
 //	}
+	user-select: none;
 	&__item {
 		width: 100%;
 		height: 100%;

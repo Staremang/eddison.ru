@@ -1,11 +1,14 @@
 @media all and (max-width: 1200px) {
+	@headerHeight: 60px;
 	.container {
-		margin-top: 60px;
+		margin-top: @headerHeight;
 	}
-	
+	.scale {
+		top: @headerHeight;
+	}
 	.header {
 		&__logo {
-			height: 60px;
+			height: @headerHeight;
 			width: 120px;
 			background-size: 70px;
 		}
@@ -85,13 +88,17 @@
 			}
 		}
 	}
+	@headerHeight: 28px;
 	.container {
-		margin-top: 28px;
+		margin-top: @headerHeight;
+	}
+	.scale {
+		top: @headerHeight;
 	}
 	.header {
 		flex-direction: column;
 		&__logo {
-			height: 28px;
+			height: @headerHeight;
 			width: 67px;
 			background-size: 40px;
 		}
@@ -365,6 +372,23 @@
 			}
 		}
 	}
+	.scale {
+		display: none;
+	}
+	.portfolio {
+		margin: 0;
+	}
+	
+	.popup-contacts {
+		.contacts {
+			max-width: 90%;
+			height: 80%;
+			&__map {
+				height: 50%;
+				flex-shrink: 1;
+			}
+		}
+	}
 //	.portfolio {
 //		margin-left: 80px;
 //		&__item {
@@ -393,12 +417,6 @@
 //	}
 }
 @media all and (max-width: 425px) {
-	.scale {
-		display: none;
-	}
-	.portfolio {
-		margin: 0;
-	}
 	.grid {
 		&-w {
 			&-2 {
