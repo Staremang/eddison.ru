@@ -181,7 +181,7 @@ window.onload = window.onresize = function () {
 }
 $(document).ready(function () {
 	if(document.querySelector('.popup-contacts')) {
-		$('a[href="#contacts"]').click(function () {
+		$('a[href*="#contacts"]').click(function () {
 			$('.popup-contacts').fadeIn();
 			$(this).addClass('active');
 //			$('.popup-contacts').addClass('fadeIn');
@@ -191,7 +191,7 @@ $(document).ready(function () {
 			$('.popup-contacts').fadeOut();
 		})
 	} else {
-		$('a[href="#contacts"]').anchor({
+		$('a[href*="#contacts"]').anchor({
 			transitionDuration: 1000
 		});
 	}
