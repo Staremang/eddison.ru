@@ -222,9 +222,11 @@ $(document).ready(function () {
 		contactsButton.anchor({
 			transitionDuration: 1000
 		});
-		contactsButton.click(function () {
-			$('.header__mobile').toggleClass('hide');
-		})
+		if (document.documentElement.clientWidth <= 768) {
+			contactsButton.click(function () {
+				$('.header__mobile').toggleClass('hide');
+			})
+		}
 		
 	}
 	$('a[href="#reviews"]').anchor({
