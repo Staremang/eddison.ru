@@ -159,8 +159,28 @@ function setScale () {
 			scaleBlock.appendChild(elM);
 		});
 	});
+	
+	document.querySelectorAll('.scale__item')[0].classList.add('active');
+	
+	var i = 0, oldScroll = 0;
+	window.onscroll = function (event) {
+		if (window.pageYOffset > oldScroll) {
+			if (i < date.length && date[i].months[0].el[0].getBoundingClientRect().top - headerH < 0) { 
+				$('.scale__item').removeClass('active');
+				document.querySelectorAll('.scale__item')[i].classList.add('active');
+				i++;
+			}
+		} else {
+			if (i > 1 && date[i - 1].months[0].el[0].getBoundingClientRect().top - headerH > 0) { 
+				i--;
+				$('.scale__item').removeClass('active');
+				document.querySelectorAll('.scale__item')[i - 1].classList.add('active');
+			}
+		}
+		oldScroll = window.pageYOffset
+	}
+	
 }
-
 window.onload = window.onresize = function () {
 	var firstHeight;
 	if (document.documentElement.clientWidth <= 768) {
@@ -271,7 +291,6 @@ $(document).ready(function () {
 		margin: 50,
 		autoplay:true,
 		autoplayTimeout:1000,
-//		autoplayHoverPause:false,
 		responsive:{
 			0:{
 				items:1,
