@@ -135,8 +135,9 @@
 	&__title {
 		text-transform: uppercase;
 		font-size: 16px;
-		font-weight: 500;
-		letter-spacing: 4.6px;
+		font-weight: 400;
+		letter-spacing: 4.7px;
+		color: #050607;
 	}
 }
 .pr-section {
@@ -197,7 +198,7 @@
 	height: 100%;
 	&__item {
 		height: 100%;
-		padding: 40px;
+//		padding: 40px;
 		display: flex;
 //		justify-content: center;
 		align-items: center;
@@ -229,7 +230,11 @@
 		}
 	}
 }
-
+.col-lg-3, .col-sm-3 { // Я не знаю, зачем это, но пусть будет
+    width: 25%;
+    float: left;
+    padding-bottom: 20px;
+}
 .services {
 	display: flex;
 	align-items: stretch;
@@ -239,12 +244,12 @@
 	&__title {
 		font-size: 24px;
 		&-block {
-			min-height: 85px;
-			
+			min-height: 45px;
 			color: white;
+			margin-top: 24px;
 			background: black;
 			padding: 5px;
-			border-radius: 100px;
+//			border-radius: 100px;
 			text-transform: uppercase;
 			letter-spacing: 4px;
 			
@@ -273,6 +278,7 @@
 	} 
 	&__item {
 		display: block;
+		text-align: -webkit-center;
 		text-decoration: none;
 		width: 100%;
 		padding: 10px;
@@ -302,14 +308,14 @@
 		display: flex;
 		flex-direction: column;
 		&-name {
-			height: 100*90/580%;
+//			height: 100*90/580%;
 			background: white;
 			
-			text-transform: uppercase;
+//			text-transform: uppercase;
 			font-weight: 100;
 //			font-size: 16px;
 			font-size: 100*16/1920vw;
-			letter-spacing: 5px;
+			letter-spacing: 1.2px;
 			padding: 15px;
 //			line-height: 28px;
 			
@@ -400,7 +406,7 @@
 	&__item {
 //		border: 1px solid green;
 //		margin: 10px;
-		padding: 10px;
+		padding: 5px;
 		float: left;
 	}
 	&__sizer {
@@ -476,11 +482,12 @@
 				display: block;
 				width: 11px;
 				height: 11px;
-				background: #ed0677;
+				top: 1px;
+				/*background: #ed0677; */
 				position: absolute;
 				right: -15px;
 				top: -4px;
-				border-radius: 50%;
+				border-radius: 50%
 			}
 		}
 		&_m {
@@ -489,6 +496,7 @@
 			background: black;
 			position: absolute;
 			left: 50px;
+			top: 1px;
 		}
 	}
 	&__mouse {
@@ -499,4 +507,51 @@
 		opacity: 0;
 		transition: opacity .3s ease;
 	}
+}
+
+.simply-scroll-container {
+    position: relative;
+    margin-top: 30px;
+}
+
+.simply-scroll-clip {
+    position: relative;
+    overflow: hidden;
+}
+
+.simply-scroll-list {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.simply-scroll-list li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.simply-scroll-list li img {
+    border: none;
+    display: block;
+    width: 200px;
+    height: 100px;
+}
+
+.simply-scroll {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 1em;
+}
+
+.simply-scroll .simply-scroll-clip {
+    width: 100%;
+    height: 100px;
+}
+
+.simply-scroll .simply-scroll-list li {
+    float: left;
+    width: 200px;
+    height: 100px;
 }
