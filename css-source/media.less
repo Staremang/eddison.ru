@@ -1,7 +1,8 @@
 @media all and (max-width: 1200px) {
 	@headerHeight: 60px;
 	.container {
-		margin-top: @headerHeight;
+//		margin-top: @headerHeight;
+		padding-top: @headerHeight;
 	}
 	.scale {
 		top: @headerHeight;
@@ -107,7 +108,8 @@
 	}
 	@headerHeight: 28px;
 	.container {
-		margin-top: @headerHeight;
+//		margin-top: @headerHeight;
+		padding-top: @headerHeight;
 	}
 	.scale {
 		top: @headerHeight;
@@ -272,6 +274,10 @@
 	}
 	.pr-section {
 		flex-direction: column;
+		iframe {
+			height: 1080/1920 * 100vw;
+			min-height: 0;
+		}
 	}
 	.pr-col {
 		&__left {
@@ -293,14 +299,14 @@
 			
 		}
 	}
-	.pr-slider {
-		&__item {
+//	.pr-slider {
+//		&__item {
 //			padding: 20px 20px 40px;
-		}
+//		}
 //		.owl-nav.disabled + .owl-dots {
 //			margin-top: -15px; 
 //		}
-	}
+//	}
 	
 	.services {
 		&__title {

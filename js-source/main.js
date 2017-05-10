@@ -267,7 +267,6 @@ function setGallery() {
 	document.querySelectorAll('.gallery__container').forEach(function(item, i, arr) {
 //		var img = new Image();
 		img = item.children[0];
-		console.log(img.width);
 		el = document.createElement('div');
 		el.style.paddingBottom = img.height/img.width*100 + '%';
 		
@@ -280,7 +279,9 @@ function setGallery() {
 	document.querySelector('.gallery').classList.add('gallery_load');
 }
 window.onload = window.onresize = function () {
-	setGallery();
+	if (document.querySelector('.gallery')) {
+		setGallery();
+	}
 	var firstHeight;
 	if (document.documentElement.clientWidth <= 768) {
 		
