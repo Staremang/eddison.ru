@@ -288,27 +288,45 @@ img {
     display: flex;
     justify-content: center;
 	&__title {
+		text-align: center;
 		text-transform: uppercase;
 		text-decoration: none;
 		color: black;
-//		letter-spacing: 1px;
-		text-align: center;
-		
-		font-size: 20px;
+//		font-size: 20px;
+		font-size: 1vw;
 		letter-spacing: 3.7px;
-		
 		background-color: white;
-
-//		padding: 3px 15px;
 		padding: 6px 15px 3px;
-//		margin: auto;
-//		left: 0;
-//		right: 0;
-//		display: inline;
+		max-width: 100%;
+		word-break: break-word;
+		word-wrap: break-word;
+		hyphens: auto;
 		&_white {
 			color: white;
 			background-color: black;
 		}
+	}
+}
+.gallery {
+	&_load {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		vertical-align: bottom;
+	}
+	&__container {
+		margin: 10px;
+		position: relative;
+//		> img {
+//			position: absolute;
+//			top: 0;
+//			width: 100%;
+//			vertical-align: bottom;
+//		}
 	}
 }
 .footer {
