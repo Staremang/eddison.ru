@@ -358,12 +358,12 @@
 	&__item {
 		width: 100%;
 		height: 100%;
-		border-style: solid;
-		border-width: 10px;
+//		border-style: solid;
+//		border-width: 10px;
 		position: relative;
 		
 		background-position: center;
-		background-size: cover;
+		background-size: 100% 100%;
 		background-repeat: no-repeat;
 		display: block;
 		.first__annotation {
@@ -396,6 +396,7 @@
 .portfolio-grid {
 //	display: flex;
 //	flex-wrap: wrap;
+	margin-right: 10px;
 	&__item {
 //		border: 1px solid green;
 //		margin: 10px;
@@ -410,20 +411,30 @@
 	&-w {
 		&-2 {
 			width: 50%;
+//			width: 915/1830%;
 		}
 		&-1 {
 			width: 25%;
-			
+//			width: 460/1830%;
 		}
 	}
 	&-h {
+		@w: 895; // Ширина в макете
+		@h: 583; // Высота в макете
+		/**
+		 * @h + 20 - ширина элемента в макете с учетом padding
+		 * 1920 - 90 - ширина блока в макете
+		
+		437.5/563 = 0,7462304701
+		563/437.5 	= 1,2868571429
+					= 1,3325612903
+		895/583 	= 1,5351629503
+		 */
 		&-2 {
-			height: 623/1980 * 100vw;
-//			height: 30.36458333vw;
+			height: calc(~"(100vw - 90px)*" (@h + 20)/(1920 - 90));
 		}
 		&-1 {
-			height: 623/1980 * 50vw;
-//			height: 30.36458333vw/2;
+			height: calc(~"(100vw - 90px)*" (@h + 20)/(2*(1920 - 90)));
 			
 		}
 	}

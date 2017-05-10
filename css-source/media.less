@@ -79,6 +79,23 @@
 //			}
 		}
 	}
+	.footer__social {
+		margin-top: 10px;
+	}
+	.footer__copyright {
+		font-size: 16px;
+		flex-direction: column;
+		.btn__social {
+			width: 35px;
+			height: 35px;
+			background-size: auto 17px;
+			margin: 0;
+			&.btn-fb {
+				background-position-y: 10px;
+				background-size: auto 26px;
+			}
+		}
+	}
 }
 @media all and (max-width: 768px) {
 	.col {
@@ -336,6 +353,10 @@
 				&.btn-vk {
 					background-size: 8px;
 				}
+				&.btn-fb {
+					background-position-y: 2px;
+					background-size: auto 14px;
+				}
 			}
 		}
 		&__dev {
@@ -344,10 +365,10 @@
 				width: 100px;
 			}
 		}
-		&__social {
-			margin-top: 10px;
-		
-		}
+//		&__social {
+//			margin-top: 10px;
+//		
+//		}
 	}
 	
 	.grid {
@@ -357,17 +378,18 @@
 			}
 			&-1 {
 				width: 50%;
-
 			}
 		}
 		&-h {
+			@w: 895; // Ширина в макете
+			@h: 583; // Высота в макете
 			&-2 {
-				height: 623/1980 * 200vw;
-	//			height: 30.36458333vw;
+//				height: calc(~"(100vw - 90px)*" 2 * (@h + 20)/(1920 - 90) ); 
+				height: calc(~"100vw *" 583/895);
 			}
 			&-1 {
-				height: 623/1980 * 200vw;
-	//			height: 30.36458333vw/2;
+//				height: calc(~"(100vw - 90px)*" 2 * (@h + 20)/(2*(1920 - 90)));
+				height: calc(~"100vw *" 583/(895 * 2));
 
 			}
 		}
@@ -417,28 +439,37 @@
 //	}
 }
 @media all and (max-width: 425px) {
-	.grid {
-		&-w {
-			&-2 {
-				width: 100%;
-			}
-			&-1 {
-				width: 100%;
-
-			}
-		}
-		&-h {
-			&-2 {
-				height: 623/1980 * 200vw;
-	//			height: 30.36458333vw;
-			}
-			&-1 {
-				height: 623/1980 * 200vw;
-	//			height: 30.36458333vw/2;
-
-			}
-		}
-	}
+//	.grid {
+//		&-w {
+//			&-2 {
+//				width: 100%;
+//			}
+//			&-1 {
+//				width: 100%;
+//
+//			}
+//		}
+//		&-h {
+//			&-2 {
+////				height: calc(~"(100vw - 90px)*" 2 * (@h + 20)/(1920 - 90) ); 
+//				height: calc(~"100vw *" 583/895);
+//			}
+//			&-1 {
+////				height: calc(~"(100vw - 90px)*" 2 * (@h + 20)/(2*(1920 - 90)));
+//				height: calc(~"100vw *" 583/(895 * 2));
+//
+//			}
+//			&-2 {
+//				height: 623/1980 * 200vw;
+//	//			height: 30.36458333vw;
+//			}
+//			&-1 {
+//				height: 623/1980 * 200vw;
+//	//			height: 30.36458333vw/2;
+//
+//			}
+//		}
+//	}
 	.services {
 //		&__title {
 //			font-size: 12px;
